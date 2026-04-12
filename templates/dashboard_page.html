@@ -1,0 +1,183 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="dashboard-page">
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <h1>Producer Dashboard</h1>
+            <p>Welcome back! Manage the hub below.</p>
+        </header>
+
+        <!-- Core Action Buttons -->
+        <div class="action-grid">
+            <div class="action-btn" onclick="popOpen('addModal')">
+                <span>Add Item</span>
+            </div>
+            <div class="action-btn" onclick="popOpen('updateModal')">
+                <span>Update Item</span>
+            </div>
+            <div class="action-btn" onclick="popOpen('stockModal')">
+                <span>Add Stock</span>
+            </div>
+            <div class="action-btn" onclick="popOpen('deleteModal')">
+                <span>Delete Item</span>
+            </div>
+        </div>
+
+        <!-- Store Inventory Section -->
+        <section class="dashboard-section">
+            <h2>Store Inventory</h2>
+            <div class="table-wrapper">
+                <table class="interactive-table" id="inventoryTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Product Name</th>
+                            <th>Price</th>
+                            <th>Current Stock</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for product in products %}
+                        <tr data-id="{{ product[0] }}" data-name="{{ product[1] }}" data-price="{{ product[2] }}"
+                            onclick="selectThing(this)">
+                            <td>#{{ product[0] }}</td>
+                            <td>{{ product[1] }}</td>
+                            <td>${{ "%.2f"|format(product[2]) }}</td>
+                            <td class="{{ 'low-stock' if product[3] < 10 else '' }}">{{ product[3] }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Recent Orders Section -->
+        <section class="dashboard-section">
+            <h2>Recent Orders</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Product</th>
+                            <th>Qty</th>
+                            <th>Total</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for order in orders %}
+                        <tr>
+                            <td>#{{ order[0] }}</td>
+                            <td>{{ order[1] }}</td>
+                            <td>{{ order[2] }}</td>
+                            <td>${{ "%.2f"|format(order[3]) }}</td>
+                            <td>
+                                <form action="/admin/order/update_status" method="POST"
+                                    style="margin:0; border:none; padding:0; background:none; box-shadow:none;">
+                                    <input type="hidden" name="order_id" value="{{ order[0] }}">
+                                    <select name="status" class="status-select" onchange="this.form.submit()">
+                                        <option value="Pending" {{ 'selected' if order[4]=='Pending' else '' }}>Pending
+                                        </option>
+                                        <option value="Payment Received" {{ 'selected' if order[4]=='Payment Received'
+                                            else '' }}>Payment Received</option>
+                                        <option value="Awaiting Dispatch" {{ 'selected' if order[4]=='Awaiting Dispatch'
+                                            else '' }}>Awaiting Dispatch</option>
+                                        <option value="Completed" {{ 'selected' if order[4]=='Completed' else '' }}>
+                                            Completed</option>
+                                    </select>
+                                </form>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+</div>
+
+<!-- Add Item Modal -->
+<div id="addModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="shutIt('addModal')">&times;</span>
+        <h2>Add New Item</h2>
+        <form action="/admin/product/add" method="POST">
+            <div class="form-group">
+                <label>Product Name</label>
+                <input type="text" name="name" required>
+            </div>
+            <div class="form-group">
+                <label>Price</label>
+                <input type="number" name="price" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label>Initial Stock</label>
+                <input type="number" name="stock" required>
+            </div>
+            <button type="submit" class="btn drk-btn w-100">Add Product</button>
+        </form>
+    </div>
+</div>
+
+<!-- Update Item Modal -->
+<div id="updateModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="shutIt('updateModal')">&times;</span>
+        <h2>Update Item</h2>
+        <p id="updateHint" style="color: #666; margin-bottom: 1rem;">Click an item in the list to select it.</p>
+        <form action="/admin/product/update" method="POST">
+            <input type="hidden" name="product_id" id="update_id">
+            <div class="form-group">
+                <label>Product Name</label>
+                <input type="text" name="name" id="update_name" required>
+            </div>
+            <div class="form-group">
+                <label>Price</label>
+                <input type="number" name="price" id="update_price" step="0.01" required>
+            </div>
+            <button type="submit" class="btn drk-btn w-100">Update Product</button>
+        </form>
+    </div>
+</div>
+
+<!-- Add Stock Modal -->
+<div id="stockModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="shutIt('stockModal')">&times;</span>
+        <h2>Add Stock</h2>
+        <p id="stockHint" style="color: #666; margin-bottom: 1rem;">Click an item in the list to select it.</p>
+        <form action="/admin/product/add_stock" method="POST">
+            <input type="hidden" name="product_id" id="stock_id">
+            <div class="form-group">
+                <label>Product: <span id="stock_name_display" style="font-weight: bold;">None</span></label>
+                <input type="number" name="stock" placeholder="Amount to add" required>
+            </div>
+            <button type="submit" class="btn drk-btn w-100">Add Stock</button>
+        </form>
+    </div>
+</div>
+
+<!-- Delete Item Modal -->
+<div id="deleteModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="shutIt('deleteModal')">&times;</span>
+        <h2>Delete Item</h2>
+        <p style="color: #e74c3c; margin-bottom: 1rem;">Warning: This action cannot be undone.</p>
+        <form action="/admin/product/delete" method="POST">
+            <input type="hidden" name="product_id" id="delete_id">
+            <p>Are you sure you want to delete <span id="delete_name_display" style="font-weight: bold;">this
+                    item</span>?</p>
+            <button type="submit" class="btn out-btn w-100"
+                style="color: #e74c3c; border-color: #e74c3c; margin-top: 1rem;">Delete Permanently</button>
+        </form>
+    </div>
+</div>
+
+<style>
+    /* Local overrides for buttons within the dashboard context */
+    .w-100 {
+        width: 100%;
+    }
+</style>
+{% endblock %}

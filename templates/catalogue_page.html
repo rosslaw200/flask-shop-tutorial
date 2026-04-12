@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="catalogue-header">
+    <h2>Our Fresh Collection</h2>
+    <p>Straight from local producers to your doorstep.</p>
+</div>
+
+<div class="products-grid">
+    {% for product in products %}
+    <div class="product-card">
+        <!-- Image URL based on product ID -->
+        <img src="/static/images/product{{ product[0] }}.jpg" alt="{{ product[1] }}" class="product-img">
+
+        <div class="product-info">
+            <h3>{{ product[1] }}</h3>
+            <p class="price">£{{ "%.2f"|format(product[2]) }}</p>
+            <p class="stock">In Stock: {{ product[3] }}</p>
+
+            <form action="/order" method="POST" class="add_to_cart_form">
+                <input type="hidden" name="product_id" value="{{ product[0] }}">
+                <div class="qty-wrap">
+                    <label for="qty{{ product[0] }}">Qty:</label>
+                    <input type="number" id="qty{{ product[0] }}" name="quantity" value="1" min="1"
+                        max="{{ product[3] }}" class="qty-input">
+                </div>
+                <button type="submit" class="cart-btn">Buy Now</button>
+            </form>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<style>
+    .catalogue-header {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .catalogue-header h2 {
+        font-size: 2.5rem;
+        color: var(--clr-primary);
+        margin-bottom: 10px;
+    }
+
+    .catalogue-header p {
+        color: var(--clr-text-light);
+        font-size: 1.1rem;
+    }
+</style>
+
+{% endblock %}

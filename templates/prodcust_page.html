@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>{{ product[1] }}</h2>
+
+<p>Price: £{{ product[2] }}</p>
+<p>Stock Available: {{ product[3] }}</p>
+
+<form method="POST" action="/order">
+    <input type="hidden" name="product_id" value="{{ product[0] }}">
+
+    <label>Quantity:</label>
+    <input type="number" name="quantity" min="1" required>
+
+    <button type="submit">Place Order</button>
+</form>
+
+{% endblock %}

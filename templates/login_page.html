@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="log-wrap">
+    <div class="log-box">
+        <h2>Welcome Back</h2>
+        <p>Sign in to access your local hub</p>
+        
+        <form method="POST">
+            <div class="inp-wrap">
+                <input type="email" name="email" placeholder="Your Email" required>
+            </div>
+            
+            <div class="inp-wrap">
+                <input type="password" name="password" id="pwdField" placeholder="Your Secret Password" required>
+                <button type="button" class="showPwdBtn" id="showPwdBtn" style="padding-right: 10px;">
+                    Show
+                </button>
+            </div>
+            
+            <div class="auth-btns">
+                <button type="submit" class="btn drk-btn">Sign In</button>
+                <a href="/register" class="btn out-btn" style="display: flex; align-items: center; justify-content: center;">Register</a>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

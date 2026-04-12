@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greenfield Local Hub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="brand">Greenfield Hub</div>
+        <button class="hamburger" id="hamburger">
+            &#9776;
+        </button>
+        <div class="nav-links" id="nav-links">
+            {% set path = request.path %}
+            <a href="/" class="{{ 'active-link' if path == '/' else '' }}">Home</a>
+            <a href="/catalogue" class="{{ 'active-link' if path == '/catalogue' else '' }}">Products</a>
+            <a href="/producers" class="{{ 'active-link' if path == '/producers' else '' }}">Producers</a>
+            <a href="/faq" class="{{ 'active-link' if path == '/faq' else '' }}">Help/FAQ</a>
+
+            {% if session.get("role") == "admin" %}
+            <a href="/dashboard" class="{{ 'active-link' if path == '/dashboard' else '' }}">Dashboard</a>
+            {% endif %}
+
+            {% if session.get("user_id") %}
+            <a href="/logout">Logout</a>
+            {% else %}
+            <a href="/login" class="{{ 'active-link' if path == '/login' else '' }}">Sign In</a>
+            {% endif %}
+
+            <form action="/search" method="GET" class="search-form" id="search-form">
+                <input type="text" name="q" placeholder="Search..." id="search-input">
+                <button type="button" id="search-btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+
+    <!-- Site Footer -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Greenfield Local Hub. Producers & Farmers united.</p>
+    </footer>
+
+    <script src="/static/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="log-wrap">
+    <div class="log-box">
+        <h2>Create Account</h2>
+        <p>Join Greenfield Local Hub</p>
+        
+        <form method="POST">
+            <div class="inp-wrap">
+                <input type="email" name="email" placeholder="Your Email" required>
+            </div>
+            
+            <div class="inp-wrap">
+                <input type="password" name="password" id="regPwdField" placeholder="Your Secret Password" required>
+                <button type="button" class="showPwdBtn" id="regShowPwdBtn" style="padding-right: 10px;">
+                    Show
+                </button>
+            </div>
+            
+            <div class="auth-btns">
+                <button type="submit" class="drk-btn" style="flex: 2; border: none; cursor: pointer; color: white;">Register</button>
+                <a href="/login" class="out-btn" style="flex: 1; display: flex; align-items: center; justify-content: center; text-decoration: none;">Sign In</a>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
