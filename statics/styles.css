@@ -1,3 +1,14 @@
+:root {
+    --clr-primary: #2e8b57;
+    --clr-surface: #ffffff;
+    --clr-border: #e0e0e0;
+    --clr-text: #333;
+    --clr-accent: #246b43;
+    --shadow-soft: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --font-body: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
 /* Base Styles */
 * {
     box-sizing: border-box;
