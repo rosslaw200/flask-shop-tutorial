@@ -163,6 +163,16 @@ def search():
 
     return render_template("catalogue.html", products=products)
 
+# FAQ Page
+@app.route("/faq")
+def faq():
+    return render_template("faq.html")
+
+# Producers Page
+@app.route("/producers")
+def producers():
+    return render_template("producers.html")
+
 # Order
 @app.route("/order", methods=["POST"])
 def order():
