@@ -1,0 +1,71 @@
+TASK 3A – FEEDBACK GATHERING PLAN
+Project: Greenfield Hub (Local Produce E-Commerce Prototype)
+
+OVERVIEW
+This plan outlines how I intend to gather feedback on the Greenfield Hub
+ prototype. Feedback will be collected from two types of audience: technical
+ users (programming professionals) and non-technical users (potential
+ customers / general users with no coding background).
+The feedback gathered will be used to evaluate the prototype's effectiveness
+ and identify areas for improvement in the next iteration.
+
+FEEDBACK OBJECTIVES
+I want to gather feedback on the following aspects of the prototype:
+Usability - Can users navigate the site easily without guidance?
+Functionality - Do all key features (browse, order, search, login) work as expected?
+Design - Is the interface clear and visually appropriate for the audience?
+Code Quality (technical only) - Is the code well-structured and maintainable?
+Security (technical only) - Are there any obvious vulnerabilities?
+Overall Satisfaction - Would users recommend or return to this site?
+
+AUDIENCES
+Tester 1 – Technical Audience
+Name/Role: Programming professional / peer developer
+Why chosen: Can evaluate the code structure, routing logic, database design,
+ and security of the application.
+Method: Code review sheet + technical walkthrough document
+Tester 2 – Non-Technical Audience
+Name/Role: General user (e.g. a family member or gym user with no coding experience)
+Why chosen: Represents the target customer for the Greenfield Hub.
+Method: Questionnaire + observation record
+
+TOOLS AND METHODS USED
+Tool
+Audience
+Purpose
+Technical Walkthrough Document
+Technical
+Demonstrate code structure and logic
+Non-Technical Walkthrough Doc
+Non-Technical
+Demonstrate user-facing functionality
+Questionnaire
+Non-Technical
+Gather structured user opinions
+Observation Record Sheet
+Non-Technical
+Log real-time user behaviour
+Code Review Sheet
+Technical
+Structured review of code quality
+
+
+TIMELINE
+Step 1 - Prepare materials (walkthroughs, questionnaire, record sheets)
+ Step 2 - Conduct technical review session with programming professional
+ Step 3 - Conduct user observation session with non-technical tester
+ Step 4 - Give questionnaire to non-technical tester to complete
+ Step 5 - Collect and record all feedback responses
+ Step 6 - Analyse feedback and identify key findings for next iteration
+
+ASPECTS TO BE COVERED IN FEEDBACK
+Home page and navigation
+Product catalogue and search functionality
+Product ordering process (quantity, stock validation)
+User registration and login
+Admin dashboard (technical tester only)
+Visual design and layout
+Any bugs or issues encountered
+
+END OF PLAN
+

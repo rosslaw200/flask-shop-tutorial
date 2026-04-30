@@ -1,0 +1,106 @@
+FEEDBACK RESPONSE LOG
+
+Project: Greenfield Hub - Local Produce Online Shop
+Task 3a - Recorded Feedback (Ready for Analysis)
+
+PURPOSE
+
+This document is used to record and compile all feedback received from
+testers after they have completed the questionnaire, observation session,
+or code review. It provides a single summary suitable for analysis and
+for planning future iterations.
+
+TESTER 1 - NON-TECHNICAL USER
+
+Feedback Source: Questionnaire + Observation Session
+
+ABOUT THE TESTER:
+
+Age Group : [e.g. 18-30]
+Technical level : [e.g. Fairly comfortable with websites]
+Online shopper? : [Yes / No]
+
+QUESTIONNAIRE RESPONSES
+
+Navigation (B1 - ease of finding way around): Score: ___ / 5
+Navigation menu clarity (B2): [e.g. Mostly clear]
+Search bar usability (B3): [e.g. Yes, easily]
+Confusing elements (B4): ______________________
+
+Ease of ordering (C1): Score: ___ / 5
+Order confirmation clarity (C2): [e.g. Somewhat clear]
+Product details clarity (C3): [e.g. Mostly]
+Errors encountered (C4): [e.g. No errors]
+
+Design rating (D1): Score: ___ / 5
+Text readability (D2): [e.g. Mostly easy]
+Design appropriateness (D3): [e.g. Yes, it felt right]
+Design suggestions (D4): ______________________
+
+Registration/Login ease (E2): Score: ___ / 5
+Registration confusion (E3): ______________________
+
+Overall satisfaction (F1): Score: ___ / 5
+Would use if live (F2): [e.g. Probably yes]
+Top improvement suggestion (F3): ______________________
+Other comments (F4): ______________________
+
+OBSERVATION SESSION SUMMARY
+
+Task 1 (Find Honey): [Completed easily / With difficulty / Not completed]
+Task 2 (Search for Eggs): [Completed easily / With difficulty / Not completed]
+Task 3 (Place an order): [Completed easily / With difficulty / Not completed]
+Task 4 (Register): [Completed easily / With difficulty / Not completed]
+Task 5 (Producers page): [Completed easily / With difficulty / Not completed]
+
+Key moments of confusion: ______________________
+Verbal comments during session: ______________________
+Overall observer impression: [e.g. Positive - minor confusion but generally managed well]
+
+TESTER 2 - TECHNICAL USER (PROGRAMMING PROFESSIONAL)
+
+Feedback Source: Code Review Sheet
+
+ABOUT THE REVIEWER:
+
+Reviewer Identifier : [e.g. Reviewer 1]
+Files Reviewed : [e.g. init.py, /templates/]
+
+CODE REVIEW SUMMARY
+
+Code structure clarity (1a): [e.g. Mostly clear]
+Structure improvement notes (1c): ______________________
+
+DB schema appropriateness (2a): [e.g. Adequate but could be improved]
+DB data types correct (2b): [Yes / Mostly / No]
+Missing DB fields/tables (2c): ______________________
+
+Input validation (3a): [e.g. Partially - some gaps]
+Error handling (3b): [e.g. Partially]
+Validation issues (3c): ______________________
+
+Passwords stored securely (4a): [e.g. No - plaintext]
+SQL injection risk (4b): [e.g. No - parameterised queries used correctly]
+CSRF protection (4c): [e.g. No]
+Access control correct (4d): [e.g. Yes]
+Other security concerns (4e): ______________________
+
+Code readability score (5a): Score: ___ / 5
+Naming conventions (5b): [e.g. Yes]
+Duplicated code (5c): ______________________
+Performance concerns (5d): ______________________
+
+Overall code rating (6a): Score: ___ / 5
+
+Top 3 Strengths:
+
+Top 3 Areas to Improve:
+
+Additional comments (6d): ______________________
+
+KEY FINDINGS SUMMARY (for use in Task 3b analysis)
+POSITIVE FEEDBACK RECEIVED:
+ISSUES / PROBLEMS IDENTIFIED:
+SUGGESTED IMPROVEMENTS FOR NEXT ITERATION:
+
+END OF FEEDBACK RESPONSE LOG

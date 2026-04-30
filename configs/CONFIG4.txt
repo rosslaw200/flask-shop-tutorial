@@ -1,0 +1,137 @@
+USER QUESTIONNAIRE
+
+Project: Greenfield Hub - Local Produce Online Shop
+For: Non-Technical Users
+
+Thank you for taking the time to test the Greenfield Hub website.
+Please answer the questions below as honestly as you can.
+There are no right or wrong answers — your feedback helps make the site better.
+
+Your responses will be kept anonymous.
+
+SECTION A: ABOUT YOU
+
+A1. How old are you?
+[ ] Under 18
+[ ] 18-30
+[ ] 31-50
+[ ] 51+
+
+A2. How comfortable are you using websites or apps in general?
+[ ] Not comfortable at all
+[ ] Fairly comfortable
+[ ] Very comfortable
+
+A3. Have you ever shopped online before?
+[ ] Yes
+[ ] No
+
+SECTION B: NAVIGATING THE SITE
+
+B1. How easy was it to find your way around the website?
+(Circle one: 1 = Very Difficult, 5 = Very Easy)
+
+1   2   3   4   5
+
+B2. Did you find the navigation menu (top bar) clear and easy to use?
+[ ] Yes, very clear
+[ ] Mostly clear
+[ ] Somewhat confusing
+[ ] Very confusing
+
+B3. Were you able to find a product using the search bar?
+[ ] Yes, easily
+[ ] Yes, but it took a while
+[ ] No, I couldn't find it
+[ ] I didn't try the search bar
+
+B4. Is there anything on the site that was hard to find or confusing?
+
+Your answer: _______________________________________________________
+
+SECTION C: THE SHOPPING EXPERIENCE
+
+C1. How easy was it to place an order?
+(Circle one: 1 = Very Difficult, 5 = Very Easy)
+
+1   2   3   4   5
+
+C2. Did the order confirmation message make it clear that your order
+had been placed?
+[ ] Yes, completely clear
+[ ] Somewhat clear
+[ ] Not clear at all
+[ ] I did not place an order
+
+C3. Were the product details (name, price, stock level) clear enough
+to help you decide whether to order?
+[ ] Yes
+[ ] Mostly
+[ ] No
+
+C4. Did you experience any errors or problems when trying to order?
+[ ] No, everything worked fine
+[ ] Yes - please describe: _________________________________________
+
+SECTION D: DESIGN AND APPEARANCE
+
+D1. How would you rate the overall look and feel of the website?
+(Circle one: 1 = Very Poor, 5 = Excellent)
+
+1   2   3   4   5
+
+D2. Was the text on the site easy to read?
+[ ] Yes, very easy
+[ ] Mostly easy
+[ ] Sometimes hard to read
+[ ] Difficult to read
+
+D3. Did the design feel appropriate for a local food shopping website?
+[ ] Yes, it felt right
+[ ] It was okay
+[ ] Not really
+
+D4. Is there anything about the design you would change?
+
+Your answer: _______________________________________________________
+
+SECTION E: REGISTRATION AND LOGIN
+
+E1. Did you try to register or log in to the site?
+[ ] Yes - registered a new account
+[ ] Yes - logged in with an existing account
+[ ] No
+
+(If No, skip to Section F)
+
+E2. How easy was the registration/login process?
+(Circle one: 1 = Very Difficult, 5 = Very Easy)
+
+1   2   3   4   5
+
+E3. Was there anything confusing about the registration or login page?
+
+Your answer: _______________________________________________________
+
+SECTION F: OVERALL EXPERIENCE
+
+F1. Overall, how satisfied are you with the Greenfield Hub website?
+(Circle one: 1 = Very Unsatisfied, 5 = Very Satisfied)
+
+1   2   3   4   5
+
+F2. Would you use this website to buy local produce if it were live?
+[ ] Definitely yes
+[ ] Probably yes
+[ ] Probably not
+[ ] Definitely not
+
+F3. What is the ONE thing you would most like to see improved?
+
+Your answer: _______________________________________________________
+
+F4. Any other comments or suggestions?
+
+Your answer: _______________________________________________________
+
+Thank you for completing this questionnaire!

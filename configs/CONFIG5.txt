@@ -1,0 +1,117 @@
+OBSERVATION RECORD SHEET
+
+Project: Greenfield Hub - Local Produce Online Shop
+For: Non-Technical User Testing Session
+
+Instructions for Observer
+
+Watch the tester use the website without helping them unless they are
+completely stuck. Note down what they do, where they pause, what they
+click, and any comments they make out loud. Do not guide them unless
+asked. Try to remain neutral.
+
+SESSION DETAILS
+
+Tester Identifier (e.g. Tester 1 - no real names): ___________________
+
+Date of Session: __________________
+
+Time Started: __________________
+
+Time Ended: __________________
+
+Observer Name: __________________
+
+TASK 1: Find a product in the shop catalogue
+
+Task given to tester:
+"Please find a product called 'Raw Local Honey' on the website."
+
+Observations (what did the tester do?):
+
+Did the tester complete the task?
+[ ] Yes - easily
+[ ] Yes - with some difficulty
+[ ] No
+
+Time taken (approx): __________________
+
+Notes on any confusion or hesitation:
+
+TASK 2: Use the search bar
+
+Task given to tester:
+"Please use the search bar to find 'Eggs'."
+
+Observations:
+
+Did the tester complete the task?
+[ ] Yes - easily
+[ ] Yes - with some difficulty
+[ ] No
+
+Notes on any confusion or hesitation:
+
+TASK 3: Place an order
+
+Task given to tester:
+"Please order 2 of any product of your choice."
+
+Observations (did they find the order button? any issues with quantity?):
+
+Did the tester complete the task?
+[ ] Yes - easily
+[ ] Yes - with some difficulty
+[ ] No
+
+Did any errors appear?
+[ ] No
+[ ] Yes - describe: ________________________________________________
+
+Notes:
+
+TASK 4: Register an account
+
+Task given to tester:
+"Please create a new account on the website."
+
+Observations:
+
+Did the tester complete the task?
+[ ] Yes - easily
+[ ] Yes - with some difficulty
+[ ] No
+
+Notes on any confusion (e.g. with the form, error messages):
+
+TASK 5: Navigate to the Producers page
+
+Task given to tester:
+"Can you find information about the farms that supply this website?"
+
+Observations:
+
+Did the tester complete the task?
+[ ] Yes - easily
+[ ] Yes - with some difficulty
+[ ] No
+
+Notes:
+
+GENERAL OBSERVATIONS
+
+Any moments where the tester seemed confused or frustrated:
+
+Any verbal comments made by the tester during the session:
+
+Any features the tester looked for but could not find:
+
+Overall impression of the tester's experience:
+[ ] Very positive - they navigated with ease and seemed satisfied
+[ ] Positive - minor confusion but generally managed well
+[ ] Mixed - struggled with several tasks
+[ ] Negative - frequently confused and unable to complete tasks
+
+Additional notes:
+
+END OF OBSERVATION RECORD

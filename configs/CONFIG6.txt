@@ -1,0 +1,118 @@
+CODE REVIEW RECORD SHEET
+
+Project: Greenfield Hub - Flask E-Commerce Prototype
+For: Technical Reviewer / Programming Professional
+
+Instructions for Reviewer
+
+Please review the prototype's source code (init.py, /static/, /templates/)
+and provide honest, structured feedback using the sections below.
+You do not need to review every line — focus on quality, structure,
+and any significant issues you identify. Be as specific as possible.
+
+REVIEWER DETAILS
+
+Reviewer Identifier (e.g. Reviewer 1 - no real names): _______________
+
+Date of Review: __________________
+
+Files Reviewed:
+[ ] init.py (main application and routes)
+[ ] /static/ (JavaScript and CSS files)
+[ ] /templates/ (HTML template files)
+[ ] database.db schema (as described in walkthrough)
+
+SECTION 1: CODE STRUCTURE AND ORGANISATION
+
+1a. Is the overall structure of the application easy to follow?
+[ ] Yes, very clear
+[ ] Mostly clear
+[ ] Somewhat unclear
+[ ] Difficult to follow
+
+1b. Comments (e.g. is logic well-separated? is naming clear?):
+
+1c. Are there any areas where the code structure could be improved?
+
+SECTION 2: DATABASE DESIGN
+
+2a. Is the database schema appropriate for the application's purpose?
+[ ] Yes, well-designed
+[ ] Adequate but could be improved
+[ ] Poor - significant issues
+
+2b. Are the correct data types used for each column?
+[ ] Yes
+[ ] Mostly
+[ ] No - issues found: ____________________________________________
+
+2c. Are there any missing fields, tables, or relationships?
+
+2d. Additional comments on the database design:
+
+SECTION 3: INPUT VALIDATION AND ERROR HANDLING
+
+3a. Is user input properly validated throughout the application?
+[ ] Yes, consistently
+[ ] Partially - some gaps
+[ ] No - significant gaps
+
+3b. Are errors handled gracefully (i.e. does the app give useful
+feedback when something goes wrong)?
+[ ] Yes
+[ ] Partially
+[ ] No
+
+3c. Specific validation issues found (if any):
+
+SECTION 4: SECURITY
+
+4a. Are passwords stored securely?
+[ ] Yes (hashed)
+[ ] No (plaintext) - recommend: __________________________________
+
+4b. Is the application vulnerable to SQL injection?
+[ ] No - parameterised queries are used correctly
+[ ] Yes - issues found: _________________________________________
+
+4c. Is there CSRF protection on forms?
+[ ] Yes
+[ ] No - recommend: _____________________________________________
+
+4d. Is access control (role-based) implemented correctly?
+[ ] Yes, admin routes are all protected
+[ ] Partially
+[ ] No
+
+4e. Other security concerns identified:
+
+SECTION 5: CODE QUALITY AND BEST PRACTICES
+
+5a. Is the code readable and well-commented?
+(Circle one: 1 = Poor, 5 = Excellent)
+
+1   2   3   4   5
+
+5b. Are variable and function names descriptive and consistent?
+[ ] Yes
+[ ] Mostly
+[ ] No
+
+5c. Is there any duplicated code that could be refactored?
+
+5d. Are there any performance concerns (e.g. inefficient queries)?
+
+SECTION 6: OVERALL ASSESSMENT
+
+6a. Overall rating of the codebase:
+(Circle one: 1 = Very Poor, 5 = Excellent)
+
+1   2   3   4   5
+
+6b. Top 3 strengths of the prototype (from a technical perspective):
+
+6c. Top 3 areas to improve in the next iteration:
+
+6d. Any other comments or recommendations:
+
+END OF CODE REVIEW RECORD

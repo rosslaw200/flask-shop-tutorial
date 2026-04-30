@@ -1,0 +1,112 @@
+NON-TECHNICAL DEMONSTRATION WALKTHROUGH
+
+Project: Greenfield Hub - Local Produce Online Shop
+Audience: General Users / Customers (No Technical Background Required)
+
+PURPOSE OF THIS DOCUMENT
+
+This document walks through the Greenfield Hub website from a user's point of
+view. It is written for people who have not used the site before and explains
+what each part of the website does and how to use it.
+
+No technical knowledge is needed to follow this guide.
+
+WHAT IS GREENFIELD HUB?
+
+Greenfield Hub is an online shop where you can browse and buy fresh, locally
+produced food — such as organic tomatoes, free-range eggs, strawberries, and
+honey — directly from local farms and producers.
+
+The site allows you to:
+
+Browse and search for products
+Create an account and log in
+Place orders for products you want to buy
+View information about the producers behind the food
+HOW TO USE THE WEBSITE – STEP BY STEP
+STEP 1: The Home Page
+
+When you first visit Greenfield Hub, you land on the home page.
+Here you will see:
+
+A welcome banner and a short description of the site
+A selection of featured products available to buy
+A navigation bar at the top with links to: Home, Shop, Producers, FAQ
+
+What to do: Have a look at the featured products. You can click on any
+product to find out more about it.
+
+STEP 2: Browsing the Shop (Catalogue)
+
+Click "Shop" in the top menu to go to the full product catalogue.
+Here you can see all available products, including:
+
+The product name
+The price per unit
+How many are currently in stock
+
+You can also use the search bar to find a specific product by name.
+For example: typing "honey" will show only honey-related products.
+
+STEP 3: Viewing a Product
+
+Click on any product to see its individual page.
+This shows you more detail about that product and gives you the option
+to place an order.
+
+STEP 4: Placing an Order
+
+On a product's page, you can choose how many you want to buy and click
+the order button.
+
+The website will check that:
+
+You have entered a valid quantity (more than zero)
+There is enough stock available
+
+If successful, you will see a confirmation message and the stock level
+will automatically update.
+
+If there is not enough stock, the site will let you know.
+
+STEP 5: Creating an Account / Logging In
+
+To use the full features of the site, you can create an account by
+clicking "Register" in the navigation bar.
+
+You will be asked for:
+
+Your email address
+A password
+
+Once registered, you can log in at any time using those details.
+The site will remember who you are while you are browsing.
+
+To log out, click "Logout" in the navigation bar.
+
+STEP 6: Producers Page
+
+Click "Producers" in the top menu to learn more about the local farms
+and producers that supply the products on the site.
+This page includes photos and information about each producer.
+
+STEP 7: FAQ Page
+
+If you have any questions about how the site works, the FAQ page
+(Frequently Asked Questions) has answers to common queries.
+
+THINGS TO LOOK OUT FOR DURING YOUR REVIEW
+
+As you explore the site, please consider:
+
+Was it easy to find what you were looking for?
+Did the site feel welcoming and easy to understand?
+Were there any moments where you felt confused or stuck?
+Did the ordering process feel straightforward?
+Did the site look good and feel trustworthy?
+Is there anything you would change or add?
+
+Your honest feedback will help improve the site for future users.
+Thank you for your time!
+
+END OF NON-TECHNICAL WALKTHROUGH

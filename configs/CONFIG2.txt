@@ -1,0 +1,136 @@
+TECHNICAL DEMONSTRATION WALKTHROUGH
+
+Project: Greenfield Hub - Flask E-Commerce Prototype
+Audience: Programming Professionals / Technical Reviewers
+
+PURPOSE OF THIS DOCUMENT
+
+This document provides a technical walkthrough of the Greenfield Hub prototype.
+It is intended for developers or programming professionals who will review the
+code structure, database design, routing logic, and security implementation.
+
+1. TECHNOLOGY STACK
+Backend Framework : Python / Flask (micro web framework)
+Database : SQLite3 (file-based relational database: database.db)
+Frontend : HTML5 templates (Jinja2), CSS3, JavaScript
+Session Handling : Flask's server-side session with a secret key
+Routing : Flask route decorators (@app.route)
+2. APPLICATION ARCHITECTURE
+
+The application follows a basic MVC-style structure:
+
+init.py          - Main application file. Contains all route definitions,
+                   database initialisation, and business logic.
+                   
+/templates/      - Jinja2 HTML templates rendered by Flask routes.
+
+/static/         - CSS stylesheets and JavaScript files.
+
+database.db      - SQLite3 database file storing all persistent data.
+
+All application logic (routing and DB access) is consolidated in init.py.
+This was a deliberate decision during early development for simplicity;
+future iterations should separate concerns into models, views, and controllers.
+
+3. DATABASE SCHEMA
+
+Three tables are created on startup via the init_db() function:
+
+TABLE: users
+  id       INTEGER PRIMARY KEY (auto-increment)
+  email    TEXT    (unique constraint enforced at application level)
+  password TEXT    (stored as plaintext - see Security note below)
+  role     TEXT    ('user' or 'admin')
+
+TABLE: products
+  id       INTEGER PRIMARY KEY
+  name     TEXT
+  price    REAL
+  stock    INTEGER
+
+TABLE: orders
+  id         INTEGER PRIMARY KEY
+  product_id INTEGER (foreign key referencing products.id)
+  quantity   INTEGER
+  total      REAL    (calculated: price * quantity)
+  status     TEXT    DEFAULT 'Pending'
+
+The database is seeded with 4 mock products and 1 admin account on first run.
+A migration block uses try/except to safely add the 'status' column if it
+does not already exist (backwards compatibility for older DB versions).
+
+4. KEY ROUTES AND LOGIC
+GET  /                    - Home page. Fetches top 4 products from DB.
+GET  /catalogue           - Full product listing. Fetches all products.
+GET  /search?q=<keyword>  - Filters products using SQL LIKE query.
+GET  /product/<id>        - Individual product page.
+
+GET/POST /login           - Authenticates user by email + password lookup.
+                            Stores user_id and role in Flask session on success.
+
+GET/POST /register        - Creates new user. Checks for duplicate email first.
+
+GET      /logout          - Clears the session entirely.
+
+POST /order               - Handles product ordering:
+                            1. Validates quantity > 0
+                            2. Checks stock >= quantity (prevents inventory debt)
+                            3. Calculates total, inserts order record
+                            4. Decrements product stock via UPDATE query
+
+GET  /dashboard           - Admin-only. Role-based access control (RBAC):
+                            Checks session["role"] == "admin". Redirects to
+                            /login if not authorised. Displays all products
+                            and orders via a JOIN query.
+
+POST /admin/product/add          - Adds new product to DB.
+POST /admin/product/update       - Updates product name and price.
+POST /admin/product/add_stock    - Increments stock value for a product.
+POST /admin/product/delete       - Removes product from DB by ID.
+POST /admin/order/update_status  - Updates order status (Pending/Shipped/etc.)
+
+All admin routes repeat the role check: session.get("role") != "admin"
+
+5. VALIDATION AND ERROR HANDLING
+Quantity validation: order route checks quantity > 0 to prevent negative orders.
+Stock validation: order route checks stock >= quantity before confirming.
+Duplicate email check: register route queries DB before inserting.
+Empty search guard: search route handles null/empty keyword input.
+Admin access control: all /admin/* routes check session role.
+6. SECURITY CONSIDERATIONS (for reviewer attention)
+[!] Passwords are stored as plaintext in the database.
+    Recommended fix: Use werkzeug.security (generate_password_hash / check_password_hash)
+
+[!] No CSRF protection on POST forms.
+    Recommended fix: Use Flask-WTF with CSRF tokens.
+
+[!] SQL queries use parameterised statements (?) correctly - no SQL injection risk.
+
+[!] Secret key is hardcoded as "secret123".
+    Recommended fix: Load from environment variable using os.environ.get()
+
+[!] The /search route could raise a TypeError if 'q' is None.
+    This has been partially mitigated but a full null-check guard is recommended.
+7. VERSION HISTORY SUMMARY
+v1.0.0 - Core Flask structure and routing established
+v1.1.0 - SQLite3 database replaced hardcoded Python lists
+v1.2.0 - Duplicate email check added to registration
+v1.3.0 - Role-based access control added to /dashboard
+v1.4.0 - Server-side stock validation before order confirmation
+v1.5.0 - Order status tracking (status column) added to orders table
+v2.0.0 - Frontend modularised (JS and CSS separated into /static/)
+v2.0.1 - Admin dashboard JS switched to dataset attributes for correct DB targeting
+v2.1.0 - Null-type guard added to search route
+v2.1.1 - Negative quantity exploit fixed in /order route
+8. AREAS FOR TECHNICAL FEEDBACK
+
+Reviewers are asked to comment on:
+
+Suitability of the database schema for the application's purpose
+Quality and readability of the Python routing logic
+Effectiveness of the input validation and error handling
+Security vulnerabilities identified and suggested remediations
+Suggestions for code refactoring or structural improvements
+Any additional features that would improve system robustness
+
+END OF TECHNICAL WALKTHROUGH
